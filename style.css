@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{ 
+    /* aqui ele já configura o principal como darkmode */
+    --hue: 240;
+    --bg-body: hsla(240, 5%, 7%, 1);
+    --controls-text:  hsla(0, 0%, 100%, 1);
+    --bg-sounds: hsla(240, 9%, 89%, 1);
+    --bg-sounds-click: hsla(195, 74%, 15%, 1);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.light{
+    --bg-body:  hsla(0, 0%, 100%, 1);
+    --controls-text: hsla(240, 5%, 7%, 1);
+}
+
+html.light .ph-sun, /*quando tiver a classe "light" o sol vai sumir, quando não tiver a lua que vai sumir */
+html:not(.light) .ph-moon{
+  display: none;
+}
+
+.hide{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.sound-on{
+    background-color: var(--bg-sounds-click);
+}
+
+.sound-on img{
+    filter: invert();
+}
+
+.sound-on [type = "range"]{
+    appearance: none;
+    margin-top: 3.2rem;
+    width: 70%;
+    height: .4rem;
+    background-color: #FFFFFF;
+    border-radius: 1.6rem;
+    cursor: pointer;
+}
+
+.sound-on [type = "range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 8rem;
+}
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+  }
+
+body{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background-color: var(--bg-body);
+}
+
+button{
+    width: 13.8rem;
+    height: 15.2rem;
+    border: transparent;
+    border-radius: 2.4rem;
+    background: var(--bg-sounds);
+    cursor: pointer;
+}
+
+#toggle-mode{
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    font-size: 6.4rem;
+    line-height: 0;
+    color: var(--controls-text);
+    background-color: transparent;
+}
+
+main{
+    align-items: center;
+    gap: 19.2rem;
+}
+
+#timer{
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1.2);
+}
+
+.ph-play-circle,
+.ph-pause-circle,
+.ph-stop-circle,
+.ph-plus-circle,
+.ph-minus-circle{
+    font-size: 4.8rem;
+    cursor: pointer;
+    color: var(--controls-text);
+
+    background-color: transparent;
+    width: 9rem;
+    height: 9rem;
+    background-color: none;
+}
+
+#countdown{
+    font-size: 12.6rem;
+    color: var(--controls-text);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1.7rem;
+}
+
+#sounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+[type = "range"]{
+    appearance: none;
+    margin-top: 3.2rem;
+    width: 70%;
+    height: .4rem;
+    background-color: #000000;
+    border-radius: 1.6rem;
+    cursor: pointer;
+}
+
+[type = "range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #000000;
+    cursor: pointer;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 8rem;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}
+
+@media (max-width: 500px){
+    main{
+        flex-direction: column;
+        gap: 9rem;
+        margin-top: 50rem;
+        padding-bottom: 20rem;
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        flex-direction: column;
+        gap: 9rem;
+        margin-top: 50rem;
+        padding-bottom: 20rem;
+    }
+}

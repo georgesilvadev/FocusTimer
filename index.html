@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+
+    <title>Focus Timer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./src/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <button id="toggle-mode">
+        <span class="sr-only"> Ativar light mode </span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+    </button>
+
+    <main class="flex">
+        <div id="timer" class="flex">
+            <div id="countdown" class="flex">
+                <span id="minutes"></span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <div id="controls" class="flex">
+                <button data-action="play" class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+
+                <button data-action="pause" class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+
+                <button data-action="stop" class="ph ph-stop-circle">
+                    <span class="sr-only">Parar contador</span>
+                </button>
+
+                <button data-action="plus" class="ph ph-plus-circle">
+                    <span class="sr-only">Aumentar</span>
+                </button>
+
+                <button data-action="minus" class="ph ph-minus-circle">
+                    <span class="sr-only">Diminuir</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="sounds">
+            <button data-action="forest" id="forest">
+                <img data-action="forest" src="./assets/forest.svg" alt="ícone de uma árvore">
+                <input type="range" value="0" class="slider">
+            </button>
+
+            <button data-action="rain" id="rain">
+                <img data-action="rain" src="./assets/rain.svg" alt="ícone de uma nuvem">
+                <input type="range" value="0" class="slider">
+            </button>
+
+            <button data-action="road" id="road">
+                <img data-action="road" src="./assets/road.svg" alt="ícone de um estabelecimento">
+                <input type="range" value="0" class="slider">
+            </button>
+
+            <button data-action="fire" id="fire">
+                <img data-action="fire" src="./assets/fire.svg" alt="ícone de chamas">
+                <input type="range" value="0" class="slider">
+            </button>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+export const controls = document.getElementById("controls");
+export const minutes = document.getElementById("minutes");
+export const seconds = document.getElementById("seconds");
+export const buttonIncrease = document.querySelector(".ph-plus-circle");
+export const buttonToDecrease = document.querySelector(".ph-minus-circle");
+export const sounds = document.getElementById('sounds');
+export const forest = document.getElementById('forest');
+export const rain = document.getElementById('rain');
+export const road = document.getElementById('road');
+export const fire = document.getElementById('fire');
+export const slider = document.querySelectorAll('.slider')
