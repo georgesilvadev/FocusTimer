@@ -1,4 +1,4 @@
-export const forestAudio = new Audio("../../sounds/forest.mp3");
+export const forestAudio = new Audio("./sounds/forest.mp3");
 
 export const rainAudio = new Audio("./sounds/rain.mp3");
 
