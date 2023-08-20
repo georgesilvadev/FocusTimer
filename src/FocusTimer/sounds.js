@@ -11,4 +11,4 @@ export const alarm = new Audio("./assets/kichen-timer.mp3");
 forestAudio.loop = true;
 rainAudio.loop = true;
 roadAudio.loop = true;
-fireAudio.loop = true;
+fireAudio.loop = true; 
